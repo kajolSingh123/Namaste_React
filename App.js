@@ -1,7 +1,6 @@
+import React from "react";
+import  ReactDOMClient  from 'react-dom/client';
 /**************************
- *
- *
- *
  * <div id ="parent">
  * <div id = "child">
  * <h1>hello I'm kajol </h1>
@@ -14,8 +13,6 @@
  * </div>
  *
  *ReactElement(object) =>HTML(Browser UnderStands)
- *
- *
  * ****************************************/
 
 const parent = React.createElement("div", { id: "parent" }, [
@@ -36,5 +33,7 @@ const parent = React.createElement("div", { id: "parent" }, [
 // );
 console.log(parent); //object
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(parent);
+const root = ReactDOMClient.createRoot(document.getElementById("root"))
+root.render(parent)
