@@ -1,1 +1,2 @@
 # Namaste React
+# core react

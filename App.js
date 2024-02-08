@@ -1,39 +1,14 @@
-import React from "react";
-import  ReactDOMClient  from 'react-dom/client';
-/**************************
- * <div id ="parent">
- * <div id = "child">
- * <h1>hello I'm kajol </h1>
- * <h2>hello I'm kumari </h2>
- * </div>
- * <div id = "child">
- * <h1>hello I'm kajol </h1>
- * <h2>hello I'm kumari </h2>
- * </div>
- * </div>
- *
- *ReactElement(object) =>HTML(Browser UnderStands)
- * ****************************************/
+import React, { Component } from "react";
+import ReactDOMClient from "react-dom/client";
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "hello I'm kajol"),
-    React.createElement("h1", {}, "hello I'm samar"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "hello I'm kajol"),
-    React.createElement("h1", {}, "hello I'm samar"),
-  ]),
-]);
+// React Function Component
+const Heading = () => <h1 className="head">Hello world</h1>;
 
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading", xyx: "abc" },
-//   "hello World  from  React"
-// );
-console.log(parent); //object
-
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(parent);
-const root = ReactDOMClient.createRoot(document.getElementById("root"))
-root.render(parent)
+const HeadingComponent = () => (
+  <div>
+    <h1> react Function Component</h1>
+    <Heading/>
+  </div>
+);
+const root = ReactDOMClient.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent />);
